@@ -42,25 +42,31 @@
         <div class="row">
           <nav class="navbar navbar-light bg-light">
             <form class="form-inline">
-              <a href="pages/summary.html" class="btn btn-sm btn-info btn-outline-success" role="button">Project Summary</a>
-              <button class="btn btn-sm btn-success btn-outline-secondary" type="button">Top 10 Chart</button>
-              <button class="btn btn-sm btn-danger btn-outline-secondary" type="button">Bacteria Cultures Chart</button>
-              <button class="btn btn-sm btn-warning btn-outline-secondary" type="button">Washing Freq</button>
+              <button id="summaryBut" class="btn btn-sm btn-primary btn-outline-success" type="button">Project Summary</button>
+              <button id="topBut" class="btn btn-sm btn-success btn-outline-secondary" type="button">Top 10 Chart</button>
+              <button id="bubBut" class="btn btn-sm btn-danger btn-outline-secondary" type="button">Bacteria Cultures Chart</button>
+              <button id="washBut" class="btn btn-sm btn-warning btn-outline-secondary" type="button">Washing Freq</button>
+              <button id="allBut" class="btn btn-sm btn-info btn-outline-secondary" type="button">All Charts</button>
             </form>
           </nav>
         </div>
-
+        <div class="row explanation">
+          <div id="explanation">
+          </div>
+        </div>
+        <div class="row">
+          <div id="focusChart" align="center">
+          </div>
+        </div>
         <!-- BAR CHART -->
         <div class="row">
-          <div id="content-panel">
-            <div class="col-md-5">
-              <div id="bar"></div>
-            </div>
+          <div class="col-md-5">
+            <div id="bar"></div>
+          </div>
 
-            <!-- GAUGE CHART -->
-            <div class="col-md-5">
-              <div id="gauge"></div>
-            </div>
+          <!-- GAUGE CHART -->
+          <div class="col-md-5">
+            <div id="gauge"></div>
           </div>
         </div>
       </div>

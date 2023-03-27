@@ -19,3 +19,8 @@ body {
   .navbar {
     text-align: center;
   }
+
+  .explanation {
+    text-align: center;
+    color:#d4da7d;
+  }
