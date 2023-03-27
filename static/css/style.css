@@ -6,7 +6,7 @@ body {
   .jumbotron {
     color: #f7f7f7;
     text-shadow: 3px 3px black;
-    background-image: url("static/images/newBactPic.png");
+    background-image: url("static/images/newBactPic.jpg");
     background-size: 100% 100%;
     text-align: center;
   }
