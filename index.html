@@ -10,19 +10,25 @@
   <link rel="stylesheet" href="/static/css/style.css">
 <body>
 
+  
   <div class="container">
+    <!-- JUMBOTRON -->
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
-    </div>    
+    </div>   
+
+    <!-- DROP DOWN  -->
     <div class="row">
       <div class="col-md-2">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
+
+        <!-- DEMOGRAPHIC INFO PANEL -->
         <div class="panel panel-primary">
           <div class="panel-heading panel-heading-custom">
             <h3 class="panel-title">Demographic Info</h3>
@@ -30,22 +36,40 @@
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-md-5">
+
+      <!-- Navigation Bar       -->
+      <div class="col-md-10">
         <div class="row">
           <nav class="navbar navbar-light bg-light">
             <form class="form-inline">
-              <button class="btn btn-sm btn-info btn-outline-success" type="button">Project Summary</button>
-              <button class="btn btn-sm btn-success btn-outline-secondary" type="button">Top 10 Chart</button>
-              <button class="btn btn-sm btn-danger btn-outline-secondary" type="button">Bacteria Cultures Chart</button>
+              <button id="summaryBut" class="btn btn-sm btn-primary btn-outline-success" type="button">Project Summary</button>
+              <button id="topBut" class="btn btn-sm btn-success btn-outline-secondary" type="button">Top 10 Chart</button>
+              <button id="bubBut" class="btn btn-sm btn-danger btn-outline-secondary" type="button">Bacteria Cultures Chart</button>
+              <button id="washBut" class="btn btn-sm btn-warning btn-outline-secondary" type="button">Washing Freq</button>
+              <button id="allBut" class="btn btn-sm btn-info btn-outline-secondary" type="button">All Charts</button>
             </form>
           </nav>
         </div>
-        <div id="bar"></div>
+        <div class="row explanation">
+          <div id="explanation">
+          </div>
+        </div>
+        <div class="row">
+          <div id="focusChart" align="center">
+          </div>
+        </div>
+        <!-- BAR CHART -->
+        <div class="row">
+          <div class="col-md-5">
+            <div id="bar"></div>
+          </div>
+
+          <!-- GAUGE CHART -->
+          <div class="col-md-5">
+            <div id="gauge"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
-    </div>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
